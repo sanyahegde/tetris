@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background-color: #fcdede; /* Light pink background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh; /* Adjust to 100vh for better coverage */
+}
+
+/* Tetris canvas styles */
+#tetris {
+    background-color: white;
+    box-shadow: 0 0 10px 0 lightgrey;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Game title styles */
+h1 {
+    font-size: 60px;
+    color: #8bd346; /* Green color for the title */
+    margin-bottom: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Description styles */
+p.description {
+    font-size: 18px;
+    color: #d64e12; /* Orange color for the description */
+    margin-bottom: 30px;
+}
+
+/* Buttons container styles */
+.buttons {
+    display: flex;
+    gap: 20px;
+}
+
+/* Start button styles */
+.startButton {
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #efdf48; /* Yellow color for the button */
+    color: #fff; /* White text color for the button */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.startButton:hover {
+    background-color: #d64e12; /* Darker yellow color on hover */
+}
+
+/* Instructions container styles */
+#instructionsDiv {
+    display: none;
+    text-align: center;
+    padding: 20px;
+    background-color: rgb(243, 211, 237); /* Light pink background for the instructions */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Instructions heading styles */
+#instructionsDiv h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #d64e12; /* Orange color for the heading */
+}
+
+/* Instructions paragraph styles */
+#instructionsDiv p {
+    font-size: 18px;
+    color: #333; /* Dark gray color for the text */
+    margin-bottom: 20px;
+}
+
+/* Close button styles */
+.closeButton {
+    font-size: 16px;
+    padding: 8px 16px;
+    border: none;
+    background-color: #8bd346; /* Green color for the button */
+    color: #fff; /* White text color for the button */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.closeButton:hover {
+    background-color: #60dbe8; /* Lighter green color on hover */
+}
+
+/* Scoreboard styles */
+#scoreboard {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #d64e12; /* Orange color for the scoreboard text */
+    transition: color 0.3s ease-in-out;
+}
+
+/* Reset button styles */
+#resetButton {
+    font-size: 18px;
+    padding: 10px 20px;
+    border: none;
+    background-color: red; /* Yellow color for the button */
+    color: #fff; /* White text color for the button */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease-in-out;
+}
+
+#resetButton:hover {
+    background-color: #8e350f; /* Darker yellow color on hover */
+}
+
+/* Animation for falling blocks */
+@keyframes fallingAnimation {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.falling-block {
+    animation: fallingAnimation 0.5s ease-in-out;
+}
+
+/* Animation for game over notification */
+@keyframes gameOverAnimation {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.game-over-notification {
+    animation: gameOverAnimation 0.3s ease-in-out;
+}

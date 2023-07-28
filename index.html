@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TETRIS</title>
+    <link rel="stylesheet" href="./style.css">
+    <!-- Add a Google Font for a nicer font style -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+</head>
+<body>
+    <div id="startGameDiv">
+        <h1>TETRIS</h1>
+        <p class="description">Do you want to start the game?</p>
+        <!-- <input type="text" id="startGameQuestion" placeholder="Yes or No"> -->
+        <div class="buttons">
+            <button class="startButton" onclick="startGame()">Yes</button>
+            <button class="startButton" onclick="showInstructions()">Instructions</button>
+        </div>
+    </div>
+    <div id="instructionsDiv" style="display: none;">
+        <h2>INSTRUCTIONS</h2>
+        <p>Use the arrow keys to move the pieces. Complete rows to earn points and level up!</p>
+        <button class="closeButton" onclick="hideInstructions()">Close</button>
+    </div>
+    <div id="tetrisGameDiv" style="display: none;">
+        <h2 id="scoreboard">SCORE: 0</h2>
+        <canvas id="tetris" height="600" width="300"></canvas>
+        <button id="resetButton">Reset Game</button>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
